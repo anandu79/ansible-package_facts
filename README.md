@@ -111,6 +111,7 @@ ansible-playbook -i hosts package_facts.yml
 
 After, execution, we will receve the below output if PHP is not installed in the remote server.
 
+![output](https://github.com/anandu79/ansible-package_facts-package-information-as-facts/blob/main/images/output.jpg)
 
 
 
