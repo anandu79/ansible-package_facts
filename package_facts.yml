@@ -1,0 +1,18 @@
+- name: "Listing packages using package_facts"
+  hosts: amazon
+  become: true
+  tasks:
+    
+    - name: "listing PHP package in client instance"
+      package_facts:
+        manager: auto
+        strategy: all
+
+    - name: "checking for PHP package"
+      when: "'php-fpm' in ansible_facts.packages"
+      debug:
+        msg: "php is available in the server"
+
+    - name: "Installing php if not available"
+      when: "'php-fpm' not in ansible_facts.packages" 
+      shell: amazon-linux-extras install php7.4 -y     
