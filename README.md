@@ -113,7 +113,7 @@ After, execution, we will receve the below output if PHP is not installed in the
 
 ![output](https://github.com/anandu79/ansible-package_facts-package-information-as-facts/blob/main/images/output.jpg)
 
-
+If PHP is not available in the remote instance, it will be automatically installed after the playbook has finished execution.
 
 
 
