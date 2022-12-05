@@ -1,4 +1,4 @@
-# ansible-package_facts-package-information-as-facts
+# ansible-package_facts
 
 Here, we will check if a package is installed or not in the client server using an ansible module called `package_facts`. 
 the purpose of this module is to return information about installed packages as facts.
@@ -50,7 +50,7 @@ remote-server-ip ansible_user="ec2-user" ansible_port=22 ansible_ssh_private_key
 
 ## Check connectivity
 
-Check connectivity to the remote instance by using the commands:
+Check connectivity to the remote instance by using any of the below commands:
 
 ```
 ansible -i hosts amazon -f 1 -m ping
@@ -109,7 +109,7 @@ ansible-playbook -i hosts package_facts.yml
 
 ## Output
 
-After, execution, we will receve the below output if PHP is not installed in the remote server.
+After, execution, we will receve the below output if PHP is installed in the remote server.
 
 ![output](https://github.com/anandu79/ansible-package_facts-package-information-as-facts/blob/main/images/output.jpg)
 
